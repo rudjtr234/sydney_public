@@ -1,0 +1,48 @@
+# 학습·추출 결과 (결과는 MLflow, 임베딩은 /path/to/sydney/embedding에 보관)
+outputs/
+logs/
+splits/
+mlruns/
+envs/
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.npy
+
+# 외부 저장소: mahmoodlab/TRIDENT commit e4c98b2, 수정 없이 사용 (README 참고)
+TRIDENT/
+
+# 데이터: 라벨·메타데이터(병리번호, 점수), Notion 초안(사례별 내용), 원본 파일
+metadata/
+docs/
+*.xlsx
+*.xls
+*.tiff
+*.tif
+*.isyntax
+*.i2syntax
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+
+# 편집기·OS
+*.swp
+.vscode/
+.idea/
+.DS_Store
+
+# 모델 가중치 · 직렬화 산출물 (형식 추가)
+*.safetensors
+*.bin
+*.onnx
+*.pkl
+*.pickle
+*.npz
+*.joblib
+checkpoints/
