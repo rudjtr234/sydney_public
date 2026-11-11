@@ -1,5 +1,9 @@
 # Updated Sydney System Grading from Gastric Biopsy WSI
 
+<p align="center">
+  <img src="./images/sydney_framework.png" alt="Multi-task attention MIL framework for Updated Sydney System grading" width="100%"/>
+</p>
+
 위 생검 H&E WSI의 patch feature에서 **Updated Sydney System 5개 항목**(H. pylori · 호중구 · 단핵구 · 위축 · 장상피화생)의 등급(0~3)을 **동시에** 예측하는 weakly-supervised multi-task MIL 파이프라인. patch-level label 없이 **사례(case) 단위 라벨만** 사용하고, [TRIDENT](https://github.com/mahmoodlab/TRIDENT)로 추출한 patch feature(`.h5`)에서 학습을 시작한다. 모델은 논문 **SydneyMTL** (Kim et al., *Histopathology* 2026)을 재구현했다. 구현은 `src/`, 실행 도구는 `scripts/`.
 
 파이프라인은 5개 요소로 나뉘고, 각 요소를 설정으로 골라 조합한다. 기본 구성은 논문 재현 설정(`site_mode=none` + `la` + `code` split)이다.
